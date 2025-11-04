@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Block1Component } from '../Blocks/Block1Component';
 import { Block2Component } from '../Blocks/Block2Component';
 import { Block3Component } from '../Blocks/Block3Component';
@@ -7,8 +7,14 @@ import { Block4Component } from '../Blocks/Block4Component';
 import { Block5Component } from '../Blocks/Block5Component';
 import { Block6Component } from '../Blocks/Block6Component';
 import { BlockQuery } from '../Blocks/BlockQuery';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 export const LandingPage = () => {
+
+    useEffect(() => {
+        sendGTMEvent({ event: 'gtm-test', page: 'landing' })
+    }, [])
+
     const block1Ref = useRef<HTMLDivElement | null>(null);
     const blockQueryRef = useRef<HTMLDivElement | null>(null);
 
