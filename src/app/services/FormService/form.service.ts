@@ -33,8 +33,6 @@ export const sendForm = async (params: SendFormParams): Promise<any> => {
             headers: { "Content-Type": "multipart/form-data" },
         });
 
-        console.log(response)
-
         return response;
     } catch (error: any) {
         console.error("Error al enviar formulario:", error);
