@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
-  weight: ["400","500","600","700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""} />
         {children}
       </body>
     </html>

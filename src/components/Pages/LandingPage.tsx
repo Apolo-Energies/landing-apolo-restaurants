@@ -12,7 +12,7 @@ import { sendGTMEvent } from '@next/third-parties/google';
 export const LandingPage = () => {
 
     useEffect(() => {
-        sendGTMEvent({ event: 'gtm-test', page: 'landing' })
+        sendGTMEvent({ event: 'pageview', page: 'landing' })
     }, [])
 
     const block1Ref = useRef<HTMLDivElement | null>(null);
